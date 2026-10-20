@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pengenalan Gerakan Tangan | Lula Malikatul Fajriyah</title>
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <style>
+        .hand-page {
+            min-height: 100vh;
+            background: #0a0a0a;
+            color: #f5f5f5;
+            padding: 45px 7%;
+        }
+
+        .hand-container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .hand-back {
+            display: inline-block;
+            color: #7cff6b;
+            text-decoration: none;
+            margin-bottom: 65px;
+            transition: 0.3s;
+        }
+
+        .hand-back:hover {
+            color: white;
+            transform: translateX(-4px);
+        }
+
+        .hand-label {
+            color: #7cff6b;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 22px;
+        }
+
+        .hand-hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin: 0 0 25px;
+        }
+
+        .hand-hero h1 span {
+            color: #7cff6b;
+        }
+
+        .hand-description {
+            max-width: 680px;
+            color: #aaa;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+
+       
+.hand-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0 70px;
+}
+
+.hand-tags span {
+    border: 1px solid #2e7d32;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #66bb6a;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.hand-tags span:hover {
+    background: #2e7d32;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.25);
+}
+
+
+
+        .hand-section {
+            border-top: 1px solid #292929;
+            padding: 38px 0;
+            margin-bottom: 20px;
+        }
+
+        .hand-section h2 {
+            font-size: clamp(27px, 4vw, 38px);
+            margin: 12px 0 20px;
+        }
+
+        .hand-section > p:not(.hand-label) {
+            color: #aaa;
+            max-width: 760px;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        /* VIDEO DEMO */
+
+        .hand-video-wrapper {
+            margin-top: 28px;
+            padding: 10px;
+            background: #111;
+            border: 1px solid #292929;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .hand-video-wrapper:hover {
+            border-color: #7cff6b;
+        }
+
+        .hand-video-wrapper video {
+            display: block;
+            width: 100%;
+            max-height: 580px;
+            aspect-ratio: 16 / 9;
+            object-fit: contain;
+            background: #050505;
+            border-radius: 10px;
+        }
+
+        .hand-video-caption {
+            color: #777;
+            font-size: 12px;
+            margin-top: 14px;
+        }
+
+        .hand-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .hand-feature {
+            background: #111;
+            border: 1px solid #262626;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .hand-feature:hover {
+            border-color: #7cff6b;
+            transform: translateY(-4px);
+        }
+
+        .hand-feature h3 {
+            color: #7cff6b;
+            font-size: 17px;
+            margin: 0 0 12px;
+        }
+
+        .hand-feature p {
+            color: #aaa;
+            line-height: 1.8;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .hand-highlight {
+            border-left: 3px solid #7cff6b;
+            background: #111;
+            padding: 25px;
+            margin-top: 25px;
+            color: #bbb;
+            line-height: 1.8;
+        }
+
+        .hand-footer {
+            border-top: 1px solid #292929;
+            margin-top: 45px;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .hand-footer p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .hand-footer a {
+            color: #7cff6b;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .hand-footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .hand-page {
+                padding: 30px 22px;
+            }
+
+            .hand-back {
+                margin-bottom: 50px;
+            }
+
+            .hand-hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hand-feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="hand-page">
+        <div class="hand-container">
+
+            <!-- KEMBALI -->
+            <a href="{{ url('/#projects') }}" class="hand-back">
+                ← Back To Projects
+            </a>
+
+            <!-- HERO -->
+            <header class="hand-hero">
+
+                <p class="hand-label">
+                    PROYEK 04 / PENGEMBANGAN PYTHON
+                </p>
+
+                <h1>
+                    Pengenalan<br>
+                    <span>Gerakan Tangan.</span>
+                </h1>
+
+                <p class="hand-description">
+                    Proyek berbasis Python untuk mendeteksi gerakan tangan
+                    melalui kamera. Proyek ini mengeksplorasi teknologi
+                    computer vision, pelacakan tangan, dan keluaran suara.
+                </p>
+
+                <div class="hand-tags">
+                    <span>Python</span>
+                    <span>OpenCV</span>
+                    <span>MediaPipe</span>
+                    <span>gTTS</span>
+                    <span>Pygame</span>
+                </div>
+
+            </header>
+
+            <!-- VIDEO DEMO -->
+            <section class="hand-section">
+
+                <p class="hand-label">01 — DEMO PROYEK</p>
+
+                <h2>Lihat Hasilnya</h2>
+
+                <p>
+                    Berikut adalah video demonstrasi proyek pengenalan
+                    gerakan tangan yang saya kembangkan menggunakan Python.
+                    Video ini memperlihatkan proses penggunaan kamera untuk
+                    mendeteksi gerakan tangan.
+                </p>
+
+                <div class="hand-video-wrapper">
+                    <video controls preload="metadata" playsinline>
+                        <source
+                            src="{{ asset('videos/hand-gesture-demo.mp4') }}"
+                            type="video/mp4"
+                        >
+
+                        Browser kamu tidak mendukung pemutaran video.
+                    </video>
+                </div>
+
+                <p class="hand-video-caption">
+                    Demo proyek · Python, OpenCV, dan MediaPipe
+                </p>
+
+            </section>
+
+            <!-- TENTANG PROYEK -->
+            <section class="hand-section">
+
+                <p class="hand-label">02 — TENTANG PROYEK</p>
+
+                <h2>Tentang Proyek</h2>
+
+                <p>
+                    Hand Gesture Recognition merupakan proyek Python
+                    yang dikembangkan untuk mempelajari cara mendeteksi
+                    gerakan tangan menggunakan kamera. Proyek ini
+                    memanfaatkan teknologi computer vision untuk
+                    memproses gambar dan mengeksplorasi keluaran suara
+                    berdasarkan gerakan yang dikenali.
+                </p>
+
+                <div class="hand-highlight">
+                    Tujuan proyek ini adalah mengeksplorasi alternatif
+                    interaksi dengan komputer melalui gerakan tangan
+                    menggunakan teknologi berbasis Python.
+                </div>
+
+            </section>
+
+            <!-- TEKNOLOGI -->
+            <section class="hand-section">
+
+                <p class="hand-label">03 — TEKNOLOGI</p>
+
+                <h2>Teknologi yang Digunakan</h2>
+
+                <div class="hand-feature-grid">
+
+                    <div class="hand-feature">
+                        <h3>Python</h3>
+                        <p>
+                            Bahasa pemrograman utama yang digunakan
+                            untuk mengembangkan proyek.
+                        </p>
+                    </div>
+
+                    <div class="hand-feature">
+                        <h3>OpenCV</h3>
+                        <p>
+                            Digunakan untuk mengakses kamera dan
+                            memproses gambar yang ditangkap.
+                        </p>
+                    </div>
+
+                    <div class="hand-feature">
+                        <h3>MediaPipe</h3>
+                        <p>
+                            Digunakan untuk mempelajari deteksi titik
+                            tangan dan pelacakan gerakan tangan.
+                        </p>
+                    </div>
+
+                    <div class="hand-feature">
+                        <h3>gTTS & Pygame</h3>
+                        <p>
+                            Digunakan untuk mengeksplorasi pembuatan
+                            suara dari teks dan pemutaran audio.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="hand-footer">
+
+                <p>
+                   Designed & Developed by Lula.
+                </p>
+
+            </footer>
+
+        </div>
+    </main>
+
+</body>
+</html>
+
