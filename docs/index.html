@@ -513,6 +513,7 @@
 
     <span id="PING_CONTENT_PUSH_NOTIFICATION" style="display: none;"></span>
 
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.getElementById('menu-toggle');
@@ -521,16 +522,25 @@
             if (!menuToggle || !navLinks) return;
 
             menuToggle.addEventListener('click', function () {
-                navLinks.classList.toggle('active');
+                const isOpen = navLinks.classList.toggle('active');
+
+                menuToggle.setAttribute('aria-expanded', isOpen);
+
+                menuToggle.innerHTML = isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
             });
 
             navLinks.querySelectorAll('a').forEach(function (link) {
                 link.addEventListener('click', function () {
                     navLinks.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
                 });
             });
         });
     </script>
+
 </body>
 
 </html>

@@ -933,9 +933,10 @@ a {
         padding: 20px 15px;
     }
 
+    /* =========================
+   NAVBAR MOBILE - HAMBURGER
+========================= */
 
-
-    /* NAVBAR MOBILE */
     .menu-toggle {
         display: none;
         background: transparent;
@@ -965,7 +966,7 @@ a {
         }
 
         .navbar-content .nav-links {
-            display: none !important;
+            display: none;
             position: absolute;
             top: calc(100% + 12px);
             left: 0;
@@ -981,7 +982,7 @@ a {
         }
 
         .navbar-content .nav-links.active {
-            display: flex !important;
+            display: flex;
         }
 
         .navbar-content .nav-links a {
@@ -990,7 +991,5 @@ a {
             color: #f5f5f5;
         }
     }
-
-
 
 }
