@@ -956,6 +956,8 @@ a {
         .menu-toggle {
             display: block;
             margin-left: auto;
+            position: relative;
+            z-index: 1001;
         }
 
         .navbar-content .nav-contact {
@@ -963,7 +965,7 @@ a {
         }
 
         .navbar-content .nav-links {
-            display: none;
+            display: none !important;
             position: absolute;
             top: calc(100% + 12px);
             left: 0;
@@ -975,18 +977,20 @@ a {
             background: #111;
             border: 1px solid #292929;
             border-radius: 12px;
-            z-index: 999;
+            z-index: 1000;
         }
 
         .navbar-content .nav-links.active {
-            display: flex;
+            display: flex !important;
         }
 
         .navbar-content .nav-links a {
             display: block;
             padding: 12px 14px;
+            color: #f5f5f5;
         }
     }
+
 
 
 }
