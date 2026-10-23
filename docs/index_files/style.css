@@ -932,10 +932,12 @@ a {
     }
 
 
+
     /* =========================
    NAVBAR MOBILE - HAMBURGER
 ========================= */
 
+    /* DEFAULT: LAPTOP DAN DESKTOP */
     .menu-toggle {
         display: none;
         background: transparent;
@@ -947,12 +949,14 @@ a {
         cursor: pointer;
     }
 
+    /* KHUSUS HP DAN TABLET KECIL */
     @media (max-width: 768px) {
         .navbar-content {
             position: relative;
             justify-content: space-between;
         }
 
+        /* Hamburger hanya muncul di HP */
         .menu-toggle {
             display: block;
             margin-left: auto;
@@ -960,11 +964,12 @@ a {
             z-index: 1001;
         }
 
+        /* Sembunyikan tombol Let's Talk di HP */
         .navbar-content .nav-contact {
             display: none;
         }
 
-        /* DROPDOWN MENU */
+        /* Dropdown menu dalam kondisi tertutup */
         .navbar-content .nav-links {
             display: none;
             position: absolute;
@@ -982,7 +987,7 @@ a {
             z-index: 1000;
         }
 
-        /* MENU MUNCUL SAAT HAMBURGER DIKLIK */
+        /* Dropdown muncul ketika hamburger diklik */
         .navbar-content .nav-links.active {
             display: flex;
         }
